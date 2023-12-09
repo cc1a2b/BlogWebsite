@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+
+{% block title %}  Hussain's Blogs {% endblock %}
+
+{% block content %}
+    <p style="word-spacing: 40px; font-size:20px;"><a href="/">Home</a>  <a href="/users/">Users</a>  <a href="/blogs">Posts</a>  <a href="#">Comments</a>  <a href="/categories/">Categories</a></p>
+
+  <h1>Comment Table</h1>
+    <ol>
+    {% for x in mycomment %}
+        <li><a href="/blogs/details/{{ x.ID }}">Post ID: {{ x.post_id_id }}</a>, User ID: {{ x.user_id_id }}, Content: {{ x.content }}</li>
+    {% endfor %}
+  </ol>
+
+{% endblock %}

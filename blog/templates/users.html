@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+{% block title %} Hussain Blog Website - List of all users {% endblock %}
+
+{% block content %}
+<p style="word-spacing: 40px; font-size:20px;"><a href="/">Home</a>  <a href="#">Users</a>  <a href="/blogs/">Posts</a>  <a href="/comments/">Comments</a>  <a href="/categories/">Categories</a></p>
+
+
+  <h1>Users Taple</h1>
+
+  <ol>
+    {% for x in myusers %}
+      <li>Username: {{ x.username }}, Email: {{ x.email }}</li>
+    {% endfor %}
+  </ol>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+
+{% block title %}  Hussain's Blogs {% endblock %}
+
+{% block content %}
+    <p style="word-spacing: 40px; font-size:20px;"><a href="/">Home</a>  <a href="/users/">Users</a>  <a href="#">Posts</a>  <a href="/comments/">Comments</a>  <a href="/categories/">Categories</a></p>
+
+  <h1>Posts Taple</h1>
+    <ol>
+    {% for x in mypost %}
+      <li>Title: <a href="details/{{ x.ID }}">{{ x.title }}</a>, Content: {{ x.content }}, Category: {{ x.category}}, Date Published: {{x.date_published}}</li>
+    {% endfor %}
+  </ol>
+
+{% endblock %}

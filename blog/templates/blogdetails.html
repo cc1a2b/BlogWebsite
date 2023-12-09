@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+{% block title %} Post {{ theblogdetails.title }} details {% endblock %}
+
+
+{% block content %}
+    <p style="word-spacing: 40px; font-size:20px;"><a href="/">Home</a>  <a href="/users/">Users</a>  <a href="/blogs/">Posts</a>  <a href="/comments/">Comments</a>  <a href="/categories/">Categories</a></p>
+
+  <h1>{{ theblogdetails.title }}</h1>
+
+  <p>Post Content: {{ theblogdetails.content }}</p>
+  <p>Post Category: {{ theblogdetails.category }}</p>
+    <p>Post Date: {{ theblogdetails.date_published }}</p>
+
+  <p>Back to <a href="/blogs">Blogs</a></p>
+
+{% endblock %}
